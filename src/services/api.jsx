@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { getAccessToken, setAccessToken } from './tokenService';
 
-axios.defaults.baseURL = 'http://localhost:3000';
+axios.defaults.baseURL = import.meta.env.VITE_BASE_URL;
 
 axios.interceptors.request.use(
   (config) => {
