@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom"
 import { useState, useContext, useEffect } from "react"
 import axios from "axios"
 import { UserContext } from "../hooks/userContext"
+import { setAccessToken } from "../services/tokenService"
 
 function Register() {
   const [firstName, setFirstName] = useState("")
@@ -21,7 +22,7 @@ function Register() {
 
   useEffect(() => {
     if (password !== confirmPassword) {
-      setErrMsg('Must match the first password')
+      setErrMsg('Konfirmasi kata sandi tidak sesuai')
     } else {
       setErrMsg('')
     }
@@ -35,7 +36,7 @@ function Register() {
   const register = async (event) => {
     event.preventDefault()
     try {
-      const { data } = await axios.post('http://localhost:3000/register', {
+      const { data } = await axios.post('/register', {
         fullName: `${firstName} ${lastName}`,
         email,
         password,
@@ -46,9 +47,9 @@ function Register() {
       navigate('/dashboard')
     } catch (error) {
       if (error.response?.status === 400) {
-        setErrMsg('Email Already Taken');
+        setErrMsg('Email sudah terdaftar');
       } else {
-        setErrMsg('Registration Failed')
+        setErrMsg('Pendaftaran gagal')
       }
       console.log(error)
     }
@@ -58,21 +59,21 @@ function Register() {
     <section className="bg-gray-50 min-h-screen flex items-center justify-center">
       <div className="bg-gray-100 flex rounded-2xl shadow-lg max-w-3xl p-5 items-center">
         <div className="md:w-1/2 px-8 md:px-16">
-          <h2 className="font-bold text-2xl text-[#002D74]">Register Page</h2>
-          <p className="text-xs mt-4 text-[#002D74]">Please enter your details</p>
+          <h2 className="font-bold text-2xl text-[#399F89]">Daftar yuk!</h2>
+          <p className="text-xs mt-4 text-[#399F89]">Masukkan data kamu dengan benar ya...</p>
 
           <form onSubmit={register} className="flex flex-col gap-4">
             <input
               className="p-2 mt-8 rounded-xl border"
               type="text"
-              placeholder="First Name"
+              placeholder="Nama depan"
               required
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)} />
             <input
               className="p-2 rounded-xl border"
               type="text"
-              placeholder="Last Name"
+              placeholder="Nama belakang"
               required
               value={lastName}
               onChange={(e) => setLastName(e.target.value)} />
@@ -87,7 +88,7 @@ function Register() {
               <input
                 className="p-2 rounded-xl border w-full"
                 type={visiblePassword ? "text" : "password"}
-                placeholder="Password"
+                placeholder="Kata sandi"
                 required
                 value={password}
                 onChange={(e) => setPassword(e.target.value)} />
@@ -107,7 +108,7 @@ function Register() {
               <input
                 className="p-2 rounded-xl border w-full"
                 type={visibleConfirmPassword ? "text" : "password"}
-                placeholder="Confirm Password"
+                placeholder="Konfirmasi kata sandi"
                 required
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)} />
@@ -123,8 +124,8 @@ function Register() {
                 <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z" />
               </svg>
             </div>
-            <p className="text-[#880808]">{errMsg != "" ? errMsg : ""}</p>
-            <button className="bg-[#002D74] rounded-xl text-white py-2 hover:scale-105 duration-300">Sign Up</button>
+            <p className="text-xs flex items-center justify-center text-[#880808]">{errMsg != "" ? errMsg : ""}</p>
+            <button className="bg-[#01A84D] rounded-xl text-white py-2 hover:scale-105 duration-300">Daftar</button>
           </form>
 
           {/* <div className="mt-6 grid grid-cols-3 items-center text-gray-400">
@@ -147,10 +148,10 @@ function Register() {
             <a href="www.google.com">Forgot your password?</a>
           </div>*/}
 
-          <div className="mt-3 text-xs flex justify-between items-center text-[#002D74]">
-            <p>Already have an account?</p>
+          <div className="mt-3 text-xs flex justify-between items-center text-[#399F89]">
+            <p>Sudah punya akun?</p>
             <Link to='/'>
-              <button className="py-2 px-5 bg-white border rounded-xl hover:scale-110 duration-300">Login</button>
+              <button className="py-2 px-5 bg-white border rounded-xl hover:scale-110 duration-300">Masuk</button>
             </Link>
           </div>
         </div>
