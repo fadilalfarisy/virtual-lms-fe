@@ -29,8 +29,8 @@ function Register() {
         .min(3, "Nama awal harus lebih dari 3 huruf")
         .required("Nama awal harus diisi"),
       lastName: Yup.string()
-        .max(20, "Nama awal harus kurang dari 20 huruf")
-        .min(3, "Nama awal harus lebih dari 3 huruf")
+        .max(20, "Nama akhir harus kurang dari 20 huruf")
+        .min(3, "Nama akhir harus lebih dari 3 huruf")
         .required("Nama akhir harus diisi"),
       email: Yup.string()
         .email("Alamat email tidak valid")

@@ -1,20 +1,28 @@
 import { Routes, Route } from 'react-router-dom'
+import Notfound from './pages/NotFound'
+import Header from './components/Header'
 import Login from './pages/Login'
 import Register from './pages/Register'
-import Dashboard from './pages/Dashboard'
-import Notfound from './pages/NotFound'
-import { UserContextProvider } from './hooks/userContext'
+import Home from './pages/Home'
+import Helpdesk from './pages/Helpdesk'
+import Class from './pages/Class'
+import About from './pages/About'
 
 function App() {
   return (
-    <UserContextProvider>
+    <>
+      <Header />
       <Routes>
-        <Route path='/' element={<Login />} />
-        <Route path='/register' element={<Register />} />
-        <Route path='/dashboard' element={<Dashboard />} />
-        <Route path='*' element={<Notfound />} />
+        <Route exact path='/' element={<Home />} />
+        <Route exact path='/class' element={<Class />} />
+        <Route exact path='/about' element={<About />} />
+        <Route exact path='/help' element={<Helpdesk />} />
+        <Route exact path='/login' element={<Login />} />
+        <Route exact path='/register' element={<Register />} />
+        <Route exact path='*' element={<Notfound />} />
       </Routes>
-    </UserContextProvider>
+    </>
+
   )
 }
 

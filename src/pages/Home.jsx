@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom"
 import axios from "axios"
 import { setAccessToken } from "../services/tokenService"
 
-function Dashboard() {
+function Home() {
   const navigate = useNavigate()
 
   const verifyAuth = async () => {
@@ -28,27 +28,9 @@ function Dashboard() {
 
   return (
     <>
-      <h1>WELCOME</h1>
-
-      <button
-        className="bg-[#01A84D] rounded-xl text-white p-2 hover:scale-105 duration-300"
-        onClick={() => verifyAuth()}>
-        get list user
-      </button>
-
-      <button
-        className="bg-[#ff0000] rounded-xl text-white p-2 hover:scale-105 duration-300"
-        onClick={() => logout()}>
-        logout
-      </button>
-
-      <button
-        className="bg-[#ff0000] rounded-xl text-white p-2 hover:scale-105 duration-300"
-        onClick={() => refresh()}>
-        logout
-      </button>
+      <h1 className="text-center">WELCOME</h1>
     </>
   )
 }
 
-export default Dashboard
+export default Home
