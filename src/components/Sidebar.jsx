@@ -34,12 +34,12 @@ function Sidebar() {
         </div>
       </span>
 
-      <div className={`sidebar fixed top-16 bottom-0 lg:left-0 duration-1000 p-2 w-[300px] overflow-y-auto text-center bg-[#F5F5F5] shadow h-screen ${isActiveBar ? "" : "left-[-300px]"}`}>
+      <div className={`sidebar fixed top-16 bottom-0 lg:left-0 duration-1000 p-2 w-[250px] overflow-y-auto text-center bg-[#F5F5F5] shadow h-screen ${isActiveBar ? "" : "left-[-300px]"}`}>
 
         <div className="text-xl">
-          <div className="p-2.5 mt-1 flex items-center justify-between rounded-md">
+          <div className="p-2.5 mt-1 flex items-center justify-between rounded-full">
             {/* <div className="flex">
-              <i className="px-2 py-1 bg-[#01A84D] rounded-md"><FaBookOpen /></i>
+              <i className="px-2 py-1 bg-[#01A84D] rounded-full"><FaBookOpen /></i>
               <h1 className="text-[15px] ml-3 text-xl text-black font-bold">Kelas</h1>
             </div> */}
             <img className="w-36 mx-auto" src="/assets/class.svg" alt="..." />
@@ -48,7 +48,7 @@ function Sidebar() {
           <hr className="my-2 text-gray-600" />
 
           <div>
-            <div className="bg-[#399F89] p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer">
+            <div className="bg-[#399F89] p-2.5 mt-2 flex items-center rounded-full px-4 duration-300 cursor-pointer">
               <div className="flex justify-between w-full items-center" onClick={dropDown1}>
                 <span className="text-[15px] ml-4 text-white">Semester 1</span>
                 <span className={`text-m text-white ${isActiveDropdown1 ? 'rotate-180' : ''}`} id="arrow">
@@ -59,19 +59,19 @@ function Sidebar() {
             <div className={`leading-7 text-left text-sm font-thin mt-2 w-4/5 mx-auto ${isActiveDropdown1 && "hidden"}`} id="submenu">
               <div className="flex items-center hover:text-[#399F89]">
                 <FaPlay className="mr-3 text-[#399F89]" />
-                <h1 className="cursor-pointer p-1">Social</h1>
+                <h1 className="cursor-pointer p-1">Bahasa Indonesia</h1>
               </div>
               <div className="flex items-center hover:text-[#399F89]">
                 <FaPlay className="mr-3 text-[#399F89]" />
-                <h1 className="cursor-pointer p-1">Social</h1>
+                <h1 className="cursor-pointer p-1">PKn</h1>
               </div>
               <div className="flex items-center hover:text-[#399F89]">
                 <FaPlay className="mr-3 text-[#399F89]" />
-                <h1 className="cursor-pointer p-1">Social</h1>
+                <h1 className="cursor-pointer p-1">Aljabar Linear</h1>
               </div>
             </div>
 
-            <div className="bg-[#399F89] p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer">
+            <div className="bg-[#399F89] p-2.5 mt-2 flex items-center rounded-full px-4 duration-300 cursor-pointer">
               <div className="flex justify-between w-full items-center" onClick={dropDown2}>
                 <span className="text-[15px] ml-4 text-white">Semester 2</span>
                 <span className={`text-m text-white ${isActiveDropdown2 ? 'rotate-180' : ''}`} id="arrow">
@@ -94,7 +94,7 @@ function Sidebar() {
               </div>
             </div>
 
-            <div className="bg-[#399F89] p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer">
+            <div className="bg-[#399F89] p-2.5 mt-2 flex items-center rounded-full px-4 duration-300 cursor-pointer">
               <div className="flex justify-between w-full items-center" onClick={dropDown3}>
                 <span className="text-[15px] ml-4 text-white">Semester 3</span>
                 <span className={`text-m text-white ${isActiveDropdown3 ? 'rotate-180' : ''}`} id="arrow">

@@ -1,10 +1,10 @@
 import Sidebar from "../components/Sidebar"
+import Callme from '../pages/Callme'
 
 function Class() {
   return (
     <>
       <Sidebar />
-      <h1 className="text-center">Class</h1>
     </>
   )
 }

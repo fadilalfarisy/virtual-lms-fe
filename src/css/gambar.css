@@ -1,0 +1,51 @@
+.gambar {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.image3 {
+  position: relative;
+  bottom: 40px;
+  left: 170px;
+  border: 0;
+}
+
+.image2 {
+  position: absolute;
+  top: 30px;
+  left: 70px;
+  border: 0;
+}
+
+.picture {
+  position: relative;
+  top: 0;
+  right: 0;
+}
+
+.image6 {
+  position: relative;
+  top: 150px;
+  right: 20px;
+  border: 0;
+}
+
+.image4 {
+  position: absolute;
+  top: 190px;
+  left: 40px;
+  border: 0;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.cvh {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
