@@ -1,39 +1,5 @@
-import { useNavigate } from "react-router-dom"
-import axios from "axios"
-import { setAccessToken } from "../services/tokenService"
 import "../css/gambar.css"
 import "../css/outputHome.css"
-
-// function Home() {
-//   const navigate = useNavigate()
-
-//   const verifyAuth = async () => {
-//     try {
-//       const { data } = await axios.get('/users')
-//       console.log(data.data)
-//     } catch (error) {
-//       console.log(error)
-//     }
-//   }
-
-//   const logout = async () => {
-//     const { data } = await axios.get('/logout', { withCredentials: true })
-//     console.log(data.data)
-//     setAccessToken('')
-//     navigate('/')
-//   }
-
-//   const refresh = async () => {
-//     const { data } = await axios.get('/token', { withCredentials: true })
-//     console.log(data.data)
-//   }
-
-//   return (
-//     <>
-//       <h1 className="text-center">WELCOME</h1>
-//     </>
-//   )
-// }
 
 function Home() {
   return (
@@ -52,7 +18,7 @@ function Home() {
         </div>
         <div className="container mt-32 max-w-xl mx-auto h-96 bg-slate-300 rounded-xl shadow-xl shadow-slate-400"
           style={{ backgroundImage: "url('https://images.unsplash.com/photo-1616400619175-5beda3a17896?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80')" }}>
-          <p className="py-36 text-center font-dosis font-bold text-digs text-white">DIGSBOARD</p></div>
+          <p className="py-36 text-center font-poppins font-bold text-digs text-white">DIGSBOARD</p></div>
       </section>
       <div className="py-16 bg-putihabu mt-20">
         <p className="font-poppins text-2xl text-center">
@@ -77,7 +43,7 @@ function Home() {
                 dengan baik demi tercapainya sebuah tujuan</p>
             </div>
             <div className="pl-28" >
-              <img src="/images/foto belajar.png" alt="" />
+              <img src="/images/Union.svg" alt="" />
             </div>
           </div>
         </div>
@@ -86,7 +52,7 @@ function Home() {
       <section className="container-fluid">
         <div className="px-28 flex bg-bgakses">
           <div className="py-40">
-            <img src="/images/Group 2.1.png" alt="image4" />
+            <img src="/images/Union (1).svg" alt="image4" />
           </div>
           <div className="py-44 pl-28">
             <h2 className="font-poppins text-akses text-black font-medium">Akses yang Mudah</h2>
@@ -110,7 +76,7 @@ function Home() {
       <section className="container pt-40 pl-24">
         <div className="flex">
           <div className="bg-hijautos h-368 w-400 py-32">
-            <h1 className="text-center font-dosis font-bold text-white text-digs">DIGSBOARD</h1>
+            <h1 className="text-center font-poppins font-bold text-white text-digs">DIGSBOARD</h1>
           </div>
           <div className="bg-ijoend h-368 w-770">
             <h2 className="pl-16 pt-14 text-sm font-poppins text-white">Faisal Rahman</h2>

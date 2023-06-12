@@ -3,9 +3,9 @@ import "../css/outputHelp.css"
 function Callme() {
   return (
     <>
-      <section id="Contact Us" className="min-h-screen flex items-center justify-center" style={{ backgroundColor: "#399f89" }}>
+      <section id="Contact Us" className="min-h-screen flex items-center justify-center pt-16" style={{ backgroundColor: "#399f89" }}>
         <div className="bg-white flex my-10">
-          <div className="w-1179">
+          <div className="w-100">
             <div className="flex flex-col items-center justify-content">
               <div className="p-10">
                 <h1 className="font-semibold font-poppins text-primary text-4xl mb-5">Hubungi kita ya!</h1>

@@ -14,14 +14,14 @@ function Login() {
   const login = async (event) => {
     event.preventDefault()
     try {
-      const { data } = await axios.post('/login', {
+      const { data } = await axios.post('/user/login', {
         email,
         password
       }, {
         withCredentials: true
       })
-      setAccessToken(data.data.accessToken)
-      navigate('/dashboard')
+      setAccessToken(data.data[0].accessToken)
+      navigate('/class')
 
     } catch (error) {
       if (error.response?.status === 404) {

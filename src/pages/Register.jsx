@@ -60,15 +60,15 @@ function Register() {
 
     onSubmit: async (values) => {
       try {
-        const { data } = await axios.post('/register', {
+        const { data } = await axios.post('/user/register', {
           fullName: `${values.firstName} ${values.lastName}`,
           email: values.email,
           password: values.password,
         }, {
           withCredentials: true
         })
-        setAccessToken(data.data.accessToken)
-        navigate('/dashboard')
+        setAccessToken(data.data[0].accessToken)
+        navigate('/class')
       } catch (error) {
         if (error.response?.status === 400) {
           setErrMsg('Email sudah terdaftar');

@@ -20,11 +20,11 @@ function About() {
       </div>
 
       <div className="bg-[#ffffff] py-24 sm:py-32">
-        <div className="mx-auto grid max-w-5xl gap-y-5 px-3 lg:px- xl:grid-cols-2">
+        {/* <div className="mx-auto grid max-w-5xl gap-y-5 px-3 lg:px- xl:grid-cols-2">
           <div className="text-center">
             <p className="mt-5 mb-5 text-base font-bold leading-6 text-[#151515]">"VISI"</p>
           </div>
-        </div>
+        </div> */}
 
         <div className="bg-[#399F89] py-24 sm:py-32">
           <div className="mx-auto grid max-w-5xl gap-y-5 px-3 lg:px- xl:grid-cols-1">
@@ -35,7 +35,7 @@ function About() {
             <ul role="list" className="grid gap-x-10 gap-y-12 sm:grid-cols-2 sm:gap-y-17  xl:grid-cols-4">
               <li>
                 <div className="flex items-center gap-x-6">
-                  <img className="h-20 w-20 rounded-full" src="/images/PasFotoPutihDasi2" alt="" />
+                  <img className="h-20 w-20 rounded-full" src="/images/Pak Abdul 1.svg" alt="" />
                   <div>
                     <h3 className="text-lg font-semibold leading-7 tracking-tight text-white">Abdul Mutholib</h3>
                     <p className="text-xs font-reguler leading-6 text-[#dedede]">Scrum Master</p>
@@ -117,16 +117,21 @@ function About() {
           </div>
         </div>
 
-        <div className="bg-[#ffffff] py-24 sm:py-32">
+        {/* <div className="bg-[#ffffff] py-24 sm:py-32">
           <div className="mx-auto grid max-w-5xl gap-y-5 px-3 lg:px- xl:grid-cols-1">
             <div className="text-center">
-              <p className="mt-1 mb-2 text-m font-bold leading-6 text-[#151515]">"<br />Semoga DIGSBOARD dapat berkembang lebih jauh lagi dan dapat memuat materi untuk seluruh jurusan
+              "
+              <br />
+              <p className="mt-1 mb-2 text-m font-bold leading-6 text-[#151515]">
+                Semoga DIGSBOARD dapat berkembang lebih jauh lagi dan dapat memuat materi untuk seluruh jurusan
                 dalam perguruan tinggi yang ada di indonesia. DIGSBOARD menjadi platform pembelajaran berbasis video nomor 1
-                dalam pencarian mahasiswa di seluruh indonesia<br /><br />"
-              </p>
+                dalam pencarian mahasiswa di seluruh indonesia              </p>
+              <br />
+              <br />
+              "
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   )
