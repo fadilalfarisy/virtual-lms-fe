@@ -30,7 +30,7 @@ axios.interceptors.response.use(
       originalConfig._retry = true
       try {
         const { data } = await axios.get('/user/refresh', {
-          withCredentials: true
+          withCredentials: 'include'
         })
         const { accessToken } = data.data
         console.log(accessToken)

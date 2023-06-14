@@ -13,18 +13,6 @@ function Header() {
     setCollapse(!isCollapse)
   }
 
-  const refresh = async () => {
-    try {
-      setAccessToken('')
-      const { data } = await axios.get('/user/refresh', {
-        withCredentials: true
-      })
-      setAccessToken(data.data.accessToken)
-    } catch (error) {
-      console.log(error)
-    }
-  }
-
   useEffect(() => {
     if (getAccessToken() != '' && getAccessToken() != null) {
       setLoggedStatus(true)

@@ -45,7 +45,7 @@ function Class() {
         link: url,
         courseId: detailVideo.course._id
       }, {
-        withCredentials: true
+        withCredentials: 'include'
       })
       const response = await axios.get(`/reference?courseId=${detailVideo.course._id}`)
       setShowModal(false)
@@ -91,7 +91,7 @@ function Class() {
     event.preventDefault()
     try {
       const { data } = await axios.delete(`/reference/${id}`, {
-        withCredentials: true
+        withCredentials: 'include'
       })
       console.log(data)
       const response = await axios.get(`/reference?courseId=${detailVideo.course._id}`)
@@ -136,7 +136,7 @@ function Class() {
         link: url,
         courseId: detailVideo.course._id
       }, {
-        withCredentials: true
+        withCredentials: 'include'
       })
       const response = await axios.get(`/reference?courseId=${detailVideo.course._id}`)
       setUpdateModal(false)
