@@ -2,7 +2,7 @@ import axios from 'axios'
 import { getAccessToken, setAccessToken } from './tokenService';
 
 axios.defaults.baseURL = import.meta.env.VITE_BASE_URL;
-let allReadyFatchingRefreshToken = false
+axios.defaults.withCredentials = true;
 
 axios.interceptors.request.use(
   (config) => {

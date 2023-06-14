@@ -488,7 +488,12 @@ function Class() {
                           <button
                             className="bg-[#f7f7f7] font-[Poppins] text-[14.94px] px-6 py-2 outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                             type="button"
-                            onClick={() => setUpdateModal(false)}
+                            onClick={() => {
+                              setUpdateModal(false)
+                              setTitle('')
+                              setChannel('')
+                              setUrl('')
+                            }}
                           >
                             Batal
                           </button>
