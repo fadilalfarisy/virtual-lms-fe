@@ -17,10 +17,13 @@ function App() {
   const [detailVideo, setDetailVideo] = useState({})
   const [loggedStatus, setLoggedStatus] = useState(false)
 
-
   return (
     <>
-      <AppContext.Provider value={{ videos, setVideos, detailVideo, setDetailVideo, loggedStatus, setLoggedStatus }}>
+      <AppContext.Provider value={{
+        videos, setVideos,
+        detailVideo, setDetailVideo,
+        loggedStatus, setLoggedStatus,
+      }}>
         <Header />
         <Routes>
           <Route exact path='/' element={<Home />} />

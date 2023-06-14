@@ -20,7 +20,7 @@ module.exports = {
         bgakses: "#F2F2F2",
       },
       fontFamily: {
-        poppins: ["Poppins"],
+        poppins: ['Poppins', 'sans-serif'],
         dosis: ["Dosis"],
         inter: ["Inter"],
         roboto: ["Roboto"],

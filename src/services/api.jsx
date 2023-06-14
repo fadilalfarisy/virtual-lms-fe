@@ -23,21 +23,21 @@ axios.interceptors.response.use(
   },
   async (error) => {
     const originalConfig = error.config
-
-    if (error.response.status === 403 && !allReadyFatchingRefreshToken) {
-      allReadyFatchingRefreshToken = true
+    console.log({
+      originalError: error
+    })
+    if (error.response.status === 498 && !originalConfig._retry) {
+      originalConfig._retry = true
       try {
         const { data } = await axios.get('/user/refresh', {
           withCredentials: true
         })
-        allReadyFatchingRefreshToken = false
         const { accessToken } = data.data
         console.log(accessToken)
         setAccessToken(accessToken)
         return axios(originalConfig);
 
       } catch (err) {
-        allReadyFatchingRefreshToken = false
         return Promise.reject(err)
       }
     }

@@ -4,6 +4,7 @@ import * as Yup from 'yup'
 import { useFormik } from "formik"
 import axios from "axios"
 import { setAccessToken } from "../services/tokenService"
+import { FaChevronLeft } from 'react-icons/fa'
 
 function Register() {
 
@@ -82,7 +83,10 @@ function Register() {
 
   return (
     <section className="bg-gray-50 min-h-screen flex items-center justify-center">
-      <div className="bg-gray-100 flex rounded-2xl shadow-lg max-w-3xl p-5 items-center">
+      <div className="bg-gray-100 flex rounded-2xl shadow-lg max-w-3xl p-5 items-center relative">
+        <Link to={'/'}>
+          <FaChevronLeft className="absolute top-6 left-6 text-[#399F89]" />
+        </Link>
         <div className="md:w-1/2 px-8 md:px-16">
           <h2 className="font-bold text-2xl text-[#399F89]">Daftar yuk!</h2>
           <p className="text-xs mt-4 text-[#399F89]">Masukkan data kamu dengan benar ya...</p>

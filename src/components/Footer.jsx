@@ -40,7 +40,7 @@ function Footer() {
                   <li>UIN Syarif Hidayatullah Jakarta</li>
                 </ul>
               </div>
-              <ul className="flex space-x-6 pt-16">
+              <ul className="flex space-x-6 pt-16 font-poppins">
                 <li>©2023</li>
                 <li>Sistem Informasi</li>
               </ul>

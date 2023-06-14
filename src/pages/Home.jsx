@@ -1,5 +1,6 @@
 import "../css/gambar.css"
 import "../css/outputHome.css"
+import { Link } from "react-router-dom"
 
 function Home() {
   return (
@@ -13,12 +14,14 @@ function Home() {
               Sistem Manajemen Konten berbasis web khusus bagi mahasiswa Sistem
               Informasi terlebih Sistem Informasi UIN Jakarta
             </p>
-            <div className="btn btn-secondary mt-3 bg-ijolumut rounded py-3 px-5 w-44 hover:bg-green-700 text-white font-poppins text-base text-center"><a href="" className=""></a>Info selanjutnya</div>
+            <Link to={'/about'} >
+              <div className="btn btn-secondary mt-3 bg-ijolumut rounded py-3 px-5 w-44 hover:bg-green-700 text-white font-poppins text-base text-center">Info selanjutnya</div>
+            </Link>
           </div>
         </div>
         <div className="container mt-32 max-w-xl mx-auto h-96 bg-slate-300 rounded-xl shadow-xl shadow-slate-400"
           style={{ backgroundImage: "url('https://images.unsplash.com/photo-1616400619175-5beda3a17896?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80')" }}>
-          <p className="py-36 text-center font-poppins font-bold text-digs text-white">DIGSBOARD</p></div>
+          <p className="py-36 text-center font-dosis font-bold text-digs text-white">DIGSBOARD</p></div>
       </section>
       <div className="py-16 bg-putihabu mt-20">
         <p className="font-poppins text-2xl text-center">
@@ -38,12 +41,12 @@ function Home() {
             <div className="">
               <h2 className="font-poppins text-white text-belajar text-left">Belajar <span className="italic">Online</span> adalah Solusi</h2>
               <p className="pt-5 max-w-md font-poppins text-lg text-white">Teknologi semakin canggih,
-                <span className="italic">E-Learning</span> semakin tumbuh berkembang
+                <span className="italic"> E-Learning</span> semakin tumbuh berkembang
                 membuat banyak sekali kesempatan untuk bisa memanfaatkan media ini
                 dengan baik demi tercapainya sebuah tujuan</p>
             </div>
             <div className="pl-28" >
-              <img src="/images/Union.svg" alt="" />
+              <img src="/images/foto belajar.svg" alt="" />
             </div>
           </div>
         </div>
@@ -52,7 +55,7 @@ function Home() {
       <section className="container-fluid">
         <div className="px-28 flex bg-bgakses">
           <div className="py-40">
-            <img src="/images/Union (1).svg" alt="image4" />
+            <img src="/images/Group 2.1.svg" alt="image4" />
           </div>
           <div className="py-44 pl-28">
             <h2 className="font-poppins text-akses text-black font-medium">Akses yang Mudah</h2>
@@ -76,24 +79,30 @@ function Home() {
       <section className="container pt-40 pl-24">
         <div className="flex">
           <div className="bg-hijautos h-368 w-400 py-32">
-            <h1 className="text-center font-poppins font-bold text-white text-digs">DIGSBOARD</h1>
+            <h1 className="text-center font-dosis font-bold text-white text-digs">DIGSBOARD</h1>
           </div>
           <div className="bg-ijoend h-368 w-770">
             <h2 className="pl-16 pt-14 text-sm font-poppins text-white">Faisal Rahman</h2>
             <h5 className="pl-16 pt-7 px-14 text-white text-bukan font-poppins leading-tight">“Bukan sekedar manajemen <span className="italic">virtual learning</span>”</h5>
-            <div className="pl-16 pt-5 text-white text-lg font-poppins hover:text-slate-300"><a href="">Baca selengkapnya</a></div>
+            <Link to={'/about'} >
+              <div className="pl-16 pt-5 text-white text-lg font-poppins hover:text-slate-300">Baca selengkapnya</div>
+            </Link>
           </div>
         </div>
         <div className="pt-10 flex space-x-7">
           <div className="bg-bgakses w-570 h-290 px-8 py-16">
             <p className="font-poppins font-semibold text-xl text-black">Kebingungan mencari video pembelajaran yang cocok untuk Mata Kuliah kamu?</p>
             <p className="pt-6 font-poppins text-lg text-black">Website kami membantu mengumpulkan konten pembelajaran yang kamu butuhkan</p>
-            <div className="pt-7 text-sm font-poppins text-black hover:text-slate-300"><a href="">Baca selengkapnya</a></div>
+            <Link to={'/class'} >
+              <div className="pt-7 text-sm font-poppins text-black hover:text-slate-300">Baca selengkapnya</div>
+            </Link>
           </div>
           <div className="bg-bgakses w-570 h-290 px-8 py-16">
             <p className="font-poppins font-semibold text-xl text-black">Materi yang disampaikan lewat perkuliahan masih kurang?</p>
             <p className="pt-6 font-poppins text-lg text-black">DIGSBOARD hadir untuk memenuhi setiap kebutuhan kamu dalam memperkaya pengetahuan</p>
-            <div className="pt-7 text-sm font-poppins text-black hover:text-slate-300"><a href="">Baca selengkapnya</a></div>
+            <Link to={'/class'} >
+              <div className="pt-7 text-sm font-poppins text-black hover:text-slate-300">Baca selengkapnya</div>
+            </Link>
           </div>
         </div>
       </section>
@@ -111,7 +120,9 @@ function Home() {
           <h2 className="font-poppins text-2xl font-semibold text-center">Siap untuk mulai?</h2>
           <p className="pt-10 font-poppins text-xl text-center">Manfaatkan DIGSBOARD untuk semua kebutuhan perkualiahanmu. Kami hadir untukmu dan hanya untukmu!</p>
           <div className="center pt-5">
-            <div className="center btn btn-secondary bg-ijolumut rounded h-14 w-48 hover:bg-green-700 text-white font-poppins text-lg"><a href="" className="py-3">Mulai Sekarang</a></div>
+            <Link to={'/class'}>
+              <div className="center btn btn-secondary bg-ijolumut rounded h-14 w-48 hover:bg-green-700 text-white font-poppins text-lg py-3">Mulai Sekarang</div>
+            </Link>
           </div>
         </div>
       </section>

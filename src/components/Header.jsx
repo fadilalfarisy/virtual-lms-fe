@@ -13,9 +13,20 @@ function Header() {
     setCollapse(!isCollapse)
   }
 
+  const refresh = async () => {
+    try {
+      setAccessToken('')
+      const { data } = await axios.get('/user/refresh', {
+        withCredentials: true
+      })
+      setAccessToken(data.data.accessToken)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
   useEffect(() => {
-    console.log({ 'status logged': loggedStatus })
-    if (getAccessToken() != '' && getAccessToken() != 'undefined') {
+    if (getAccessToken() != '' && getAccessToken() != null) {
       setLoggedStatus(true)
     }
   })
@@ -25,7 +36,8 @@ function Header() {
 
   const logout = async () => {
     try {
-      await axios.get('/user/logout')
+      const { data } = await axios.get('/user/logout', { withCredentials: true })
+      console.log(data)
       setLoggedStatus(false)
       setAccessToken('')
 
@@ -33,17 +45,6 @@ function Header() {
       console.log(error)
     }
   }
-
-  // const activeUser = () => {
-  //   if (getAccessToken() != '') {
-  //     return <button
-  //       type="submit"
-  //       className="bg-[#01A84D] rounded-xl text-white px-3 py-2"
-  //       onClick={logout}
-  //     >Logout</button>
-  //   }
-  //   return <NavLink className="w-24 text-[#818181] hover:text-[#399F89] text-sm" to='/login'>Anda seorang Dosen?</NavLink>
-  // }
 
   const location = useLocation()
   if (location.pathname === '/login' || location.pathname == '/register') {
@@ -81,10 +82,10 @@ function Header() {
               loggedStatus ?
                 <button
                   type="submit"
-                  className="bg-white rounded-xl text-[#399F89] px-3 py-2"
+                  className="bg-white rounded-xl font-poppins text-[#399F89] px-3 py-2"
                   onClick={logout}
                 >Logout</button> :
-                <NavLink className="w-24 text-[#818181] hover:text-[#399F89] text-xs" to='/login'>Anda seorang Dosen?</NavLink>
+                <NavLink className="w-24 text-[#818181] hover:text-[#399F89] text-xs font-poppins" to='/login'>Anda seorang Dosen?</NavLink>
             }
             <i className="text-2xl cursor-pointer md:hidden" onClick={useToogle}>{isCollapse ? <FaTimes /> : <FaBars />}</i>
           </div>

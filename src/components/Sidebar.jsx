@@ -128,8 +128,8 @@ function Sidebar() {
                   className="flex items-center hover:text-[#399F89]"
                   key={course._id}
                   onClick={() => requestVideo(course._id)}>
-                  <FaPlay className="mr-3 text-[#399F89]" />
-                  <h1 className="cursor-pointer p-1">{course.subject}</h1>
+                  <FaPlay className="mr-3 text-[#399F89] shrink-0" />
+                  <h1 className="cursor-pointer p-1 flex-1">{course.subject}</h1>
                 </div>
               })}
             </div>
@@ -148,8 +148,8 @@ function Sidebar() {
                   className="flex items-center hover:text-[#399F89]"
                   key={course._id}
                   onClick={() => requestVideo(course._id)}>
-                  <FaPlay className="mr-3 text-[#399F89]" />
-                  <h1 className="cursor-pointer p-1">{course.subject}</h1>
+                  <FaPlay className="mr-3 text-[#399F89] shrink-0" />
+                  <h1 className="cursor-pointer p-1 flex-1">{course.subject}</h1>
                 </div>
               })}
             </div>
@@ -168,8 +168,8 @@ function Sidebar() {
                   className="flex items-center hover:text-[#399F89]"
                   key={course._id}
                   onClick={() => requestVideo(course._id)}>
-                  <FaPlay className="mr-3 text-[#399F89]" />
-                  <h1 className="cursor-pointer p-1">{course.subject}</h1>
+                  <FaPlay className="mr-3 text-[#399F89] shrink-0" />
+                  <h1 className="cursor-pointer p-1 flex-1">{course.subject}</h1>
                 </div>
               })}
             </div>
@@ -188,8 +188,8 @@ function Sidebar() {
                   className="flex items-center hover:text-[#399F89]"
                   key={course._id}
                   onClick={() => requestVideo(course._id)}>
-                  <FaPlay className="mr-3 text-[#399F89]" />
-                  <h1 className="cursor-pointer p-1">{course.subject}</h1>
+                  <FaPlay className="mr-3 text-[#399F89] shrink-0" />
+                  <h1 className="cursor-pointer p-1 flex-1">{course.subject}</h1>
                 </div>
               })}
             </div>
@@ -208,8 +208,8 @@ function Sidebar() {
                   className="flex items-center hover:text-[#399F89]"
                   key={course._id}
                   onClick={() => requestVideo(course._id)}>
-                  <FaPlay className="mr-3 text-[#399F89]" />
-                  <h1 className="cursor-pointer p-1">{course.subject}</h1>
+                  <FaPlay className="mr-3 text-[#399F89] shrink-0" />
+                  <h1 className="cursor-pointer p-1 flex-1">{course.subject}</h1>
                 </div>
               })}
             </div>
@@ -228,8 +228,8 @@ function Sidebar() {
                   className="flex items-center hover:text-[#399F89]"
                   key={course._id}
                   onClick={() => requestVideo(course._id)}>
-                  <FaPlay className="mr-3 text-[#399F89]" />
-                  <h1 className="cursor-pointer p-1">{course.subject}</h1>
+                  <FaPlay className="mr-3 text-[#399F89] shrink-0" />
+                  <h1 className="cursor-pointer p-1 flex-1">{course.subject}</h1>
                 </div>
               })}
             </div>
@@ -248,8 +248,8 @@ function Sidebar() {
                   className="flex items-center hover:text-[#399F89]"
                   key={course._id}
                   onClick={() => requestVideo(course._id)}>
-                  <FaPlay className="mr-3 text-[#399F89]" />
-                  <h1 className="cursor-pointer p-1">{course.subject}</h1>
+                  <FaPlay className="mr-3 text-[#399F89] shrink-0" />
+                  <h1 className="cursor-pointer p-1 flex-1">{course.subject}</h1>
                 </div>
               })}
             </div>
@@ -262,14 +262,14 @@ function Sidebar() {
                 </span>
               </div>
             </div>
-            <div className={`leading-7 text-left text-sm font-thin mt-2 w-4/5 mx-auto ${isActiveDropdown8 && "hidden"}`} id="submenu">
+            <div className={`leading-7 text-left text-sm font-thin mt-2 w-auto mx-auto ${isActiveDropdown8 && "hidden"}`} id="submenu">
               {courseSemester8.map((course) => {
                 return <div
                   className="flex items-center hover:text-[#399F89]"
                   key={course._id}
                   onClick={() => requestVideo(course._id)}>
-                  <FaPlay className="mr-3 text-[#399F89]" />
-                  <h1 className="cursor-pointer p-1">{course.subject}</h1>
+                  <FaPlay className="mr-3 text-[#399F89] shrink-0" />
+                  <h1 className="cursor-pointer p-1 flex-1">{course.subject}</h1>
                 </div>
               })}
             </div>
