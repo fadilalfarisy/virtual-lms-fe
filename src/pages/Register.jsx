@@ -66,7 +66,7 @@ function Register() {
           email: values.email,
           password: values.password,
         }, {
-          withCredentials: true
+          withCredentials: 'include'
         })
         setAccessToken(data.data[0].accessToken)
         navigate('/class')
