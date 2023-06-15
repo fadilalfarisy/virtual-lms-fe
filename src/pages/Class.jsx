@@ -135,6 +135,10 @@ function Class() {
   const updateReference = async (event, id) => {
     event.preventDefault()
     try {
+      const youtubePattern = new RegExp(/^((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)?$/);
+      if (!youtubePattern.test(url)) {
+        return setErrMsg('Invalid URL Video Youtube')
+      }
       await axios.put(`/reference/${id}`, {
         title,
         channel,
