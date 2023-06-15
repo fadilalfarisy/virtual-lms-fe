@@ -113,6 +113,7 @@ function Class() {
   }
 
   const [updateModal, setUpdateModal] = useState(false)
+  const [updateNotif, setUpdateNotif] = useState(false)
   const [referenceById, setReferenceById] = useState({})
   const [updatedId, setUpdatedId] = useState('')
 
@@ -144,7 +145,7 @@ function Class() {
       })
       const response = await axios.get(`/reference?courseId=${detailVideo.course._id}`)
       setUpdateModal(false)
-      setSuccessModal(true)
+      setUpdateNotif(true)
       setVideos(response.data.references)
       setDetailVideo(response.data.info)
       setChannel('')
@@ -362,13 +363,33 @@ function Class() {
                       <BsCheckCircle className="text-9xl text-[#01A84D]" />
                       <div className="mt-8">
                         <h1 className="font-medium font-[Poppins] text-4xl text-center">Selamat!</h1>
-                        <p className="font-medium font-[Poppins] text-base text-center mt-2">Video yang kamu tambahkan berhasil diupload</p>
+                        <p className="font-medium font-[Poppins] text-base text-center mt-2">Video kamu berhasil ditambahkan</p>
                       </div>
                     </div>
                   </section>
                 </div>
               </>
             ) : null}
+
+            {updateNotif ? (
+              <>
+                <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
+                  <section className="mt-20 ml-20">
+                    <div className="w-[643px] h-[327px] bg-white shadow-lg relative shadow-slate-400 rounded-lg flex flex-col justify-center items-center">
+                      <button onClick={() => setUpdateNotif(false)}>
+                        <FaChevronLeft className="absolute left-6 top-6 text-xl text-[#01A84D]" />
+                      </button>
+                      <BsCheckCircle className="text-9xl text-[#01A84D]" />
+                      <div className="mt-8">
+                        <h1 className="font-medium font-[Poppins] text-4xl text-center">Selamat!</h1>
+                        <p className="font-medium font-[Poppins] text-base text-center mt-2">Video kamu berhasil diubah</p>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </>
+            ) : null}
+
 
             {authorizationUser ? (
               <>

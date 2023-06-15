@@ -18,106 +18,128 @@ function About() {
           </div>
         </div>
       </div>
-
-      <div className="bg-[#ffffff] py-24 sm:py-32">
-        {/* <div className="mx-auto grid max-w-5xl gap-y-5 px-3 lg:px- xl:grid-cols-2">
-          <div className="text-center">
-            <p className="mt-5 mb-5 text-base font-bold leading-6 text-[#151515]">"VISI"</p>
-          </div>
-        </div> */}
-
-        <div className="bg-[#399F89] py-24 sm:py-32">
-          <div className="mx-auto grid max-w-5xl gap-y-5 px-3 lg:px- xl:grid-cols-1">
-            <div className="text-center">
-              <h2 className="text-5xl font-bold tracking-tight text-white sm:text-5xl">Tim Kami</h2>
-              <p className="mt-7 mb-7 text-m leading-6 text-white">Dengan beranggotakan 7 orang yang merupakan mahasiswa Sistem Informasi UIN Syarif Hidayatullah Jakarta</p>
+      <div className="bg-[#399F89] pt-10 px-64">
+        <div className="box-content h-[528px] w-[842px] p-4 box-decoration bg-white rounded-md">
+          <div className="px-32 pt-8">
+            <div className="box-content w-[549px] h-[203px] shadow-slate-400 shadow-md"
+              style={{ "backgroundColor": "rgba(57, 159, 137)" }}>
+              <h2 className="font-poppins font-semibold text-5xl text-white text-center pt-5">VISI</h2>
+              <p className="font-poppins font-medium text-xl text-center text-white leading-8 pt-4 mx-3">Menjadi platform pembelajaran materi berbasis video untuk mahasiswa sistem informasi</p>
             </div>
-            <ul role="list" className="grid gap-x-10 gap-y-12 sm:grid-cols-2 sm:gap-y-17  xl:grid-cols-4">
-              <li>
-                <div className="flex items-center gap-x-6">
-                  <img className="h-20 w-20 rounded-full" src="/images/Pak Abdul 1.svg" alt="" />
-                  <div>
-                    <h3 className="text-lg font-semibold leading-7 tracking-tight text-white">Abdul Mutholib</h3>
-                    <p className="text-xs font-reguler leading-6 text-[#dedede]">Scrum Master</p>
-                  </div>
-                </div>
-              </li>
-
-              <li>
-                <div className="flex items-center gap-x-6">
-                  <img className="h-20 w-20 rounded-full" src="/images/Group 23.png" alt="" />
-                  <div>
-                    <h3 className="text-lg font-semibold leading-7 tracking-tight text-white">Hayya Apriligiani</h3>
-                    <p className="text-xs font-reguler leading-6 text-[#dedede]">Product Owner</p>
-                  </div>
-                </div>
-              </li>
-
-              <li>
-                <div className="flex items-center gap-x-6">
-                  <img className="h-20 w-20 rounded-full" src="/images/Fadil.png" alt="" />
-                  <div>
-                    <h3 className="text-lg font-semibold leading-7 tracking-tight text-white">Ahmad Fadil Alfarisy</h3>
-                    <p className="text-xs font-reguler leading-6 text-[#dedede]">Backend Developer</p>
-                  </div>
-                </div>
-              </li>
-
-              <li>
-                <div className="flex items-center gap-x-6">
-                  <img className="h-20 w-20 rounded-full" src="/images/Alda.png" alt="" />
-                  <div>
-                    <h3 className="text-lg font-semibold leading-7 tracking-tight text-white">Alda Eva Saputri</h3>
-                    <p className="text-xs font-reguler leading-6 text-[#dedede]">Frontend Developer</p>
-                  </div>
-                </div>
-              </li>
-
-              <li>
-                <div className="flex items-center gap-x-6">
-                  <img className="h-20 w-20 rounded-full" src="/images/Ical.png" alt="" />
-                  <div>
-                    <h3 className="text-lg font-semibold leading-7 tracking-tight text-white">Faisal Rahman</h3>
-                    <p className="text-xs font-reguler leading-6 text-[#dedede]">UI/UX Designer</p>
-                  </div>
-                </div>
-              </li>
-
-              <li>
-                <div className="flex items-center gap-x-6">
-                  <img className="h-20 w-20 rounded-full" src="/images/Indah.png" alt="" />
-                  <div>
-                    <h3 className="text-lg font-semibold leading-7 tracking-tight text-white">Indah Nurhayati</h3>
-                    <p className="text-xs font-reguler leading-6 text-[#dedede]">UI/UX Designer</p>
-                  </div>
-                </div>
-              </li>
-
-              <li>
-                <div className="flex items-center gap-x-6">
-                  <img className="h-20 w-20 rounded-full" src="/images/Ica.png" alt="" />
-                  <div>
-                    <h3 className="text-lg font-semibold leading-7 tracking-tight text-white">Annisa Dwi Irvianda</h3>
-                    <p className="text-xs font-reguler leading-6 text-[#dedede]">Quality Assurance</p>
-                  </div>
-                </div>
-              </li>
-
-              <li>
-                <div className="flex items-center gap-x-6">
-                  <img className="h-20 w-20 rounded-full" src="/images/Abdil.png" alt="" />
-                  <div>
-                    <h3 className="text-lg font-semibold leading-7 tracking-tight text-white">Abdillah Al Mushauwir</h3>
-                    <p className="text-xs font-reguler leading-6 text-[#dedede]">Quality Assurance</p>
-                  </div>
-                </div>
-              </li>
-
-            </ul>
+          </div>
+          <div className="px-32 pt-10">
+            <div className="box-content w-[549px] h-[203px] shadow-slate-400 shadow-md" style={{ "backgroundColor": "rgba(57, 159, 137)" }}>
+              <h2 className="font-poppins font-semibold text-5xl text-white text-center pt-5">MISI</h2>
+              <div className=" flex item-center justify-center">
+                <ul className="list-disc font-poppins font-medium text-xl text-white pt-4">
+                  <li>
+                    Kemudahan akses materi perkuliahan
+                  </li>
+                  <li>
+                    Membantu menunjang pengetahuan
+                  </li>
+                  <li>
+                    Memenuhi kebutuhan materi perkuliahan
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
+      </div>
 
-        {/* <div className="bg-[#ffffff] py-24 sm:py-32">
+      <div className="bg-[#399F89] py-24 sm:py-32 font-poppins ">
+        <div className="mx-auto grid max-w-5xl gap-y-5 px-3 lg:px- xl:grid-cols-1">
+          <div className="text-center">
+            <h2 className="text-5xl font-bold tracking-tight text-white sm:text-5xl">Tim Kami</h2>
+            <p className="mt-7 mb-7 text-m leading-6 text-white">Dengan beranggotakan 7 orang yang merupakan mahasiswa Sistem Informasi UIN Syarif Hidayatullah Jakarta</p>
+          </div>
+          <ul role="list" className="grid gap-x-10 gap-y-12 sm:grid-cols-2 sm:gap-y-17  xl:grid-cols-4">
+            <li>
+              <div className="flex items-center gap-x-6">
+                <img className="h-20 w-20 rounded-full" src="/images/Pak Abdul 1.svg" alt="" />
+                <div>
+                  <h3 className="text-lg font-semibold leading-7 tracking-tight text-white">Abdul Mutholib</h3>
+                  <p className="text-xs font-reguler leading-6 text-[#dedede]">Scrum Master</p>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div className="flex items-center gap-x-6">
+                <img className="h-20 w-20 rounded-full" src="/images/Group 23.png" alt="" />
+                <div>
+                  <h3 className="text-lg font-semibold leading-7 tracking-tight text-white">Hayya Apriligiani</h3>
+                  <p className="text-xs font-reguler leading-6 text-[#dedede]">Product Owner</p>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div className="flex items-center gap-x-6">
+                <img className="h-20 w-20 rounded-full" src="/images/Fadil.png" alt="" />
+                <div>
+                  <h3 className="text-lg font-semibold leading-7 tracking-tight text-white">Ahmad Fadil Alfarisy</h3>
+                  <p className="text-xs font-reguler leading-6 text-[#dedede]">Backend Developer</p>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div className="flex items-center gap-x-6">
+                <img className="h-20 w-20 rounded-full" src="/images/Alda.png" alt="" />
+                <div>
+                  <h3 className="text-lg font-semibold leading-7 tracking-tight text-white">Alda Eva Saputri</h3>
+                  <p className="text-xs font-reguler leading-6 text-[#dedede]">Frontend Developer</p>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div className="flex items-center gap-x-6">
+                <img className="h-20 w-20 rounded-full" src="/images/Ical.png" alt="" />
+                <div>
+                  <h3 className="text-lg font-semibold leading-7 tracking-tight text-white">Faisal Rahman</h3>
+                  <p className="text-xs font-reguler leading-6 text-[#dedede]">UI/UX Designer</p>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div className="flex items-center gap-x-6">
+                <img className="h-20 w-20 rounded-full" src="/images/Indah.png" alt="" />
+                <div>
+                  <h3 className="text-lg font-semibold leading-7 tracking-tight text-white">Indah Nurhayati</h3>
+                  <p className="text-xs font-reguler leading-6 text-[#dedede]">UI/UX Designer</p>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div className="flex items-center gap-x-6">
+                <img className="h-20 w-20 rounded-full" src="/images/Ica.png" alt="" />
+                <div>
+                  <h3 className="text-lg font-semibold leading-7 tracking-tight text-white">Annisa Dwi Irvianda</h3>
+                  <p className="text-xs font-reguler leading-6 text-[#dedede]">Quality Assurance</p>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div className="flex items-center gap-x-6">
+                <img className="h-20 w-20 rounded-full" src="/images/Abdil.png" alt="" />
+                <div>
+                  <h3 className="text-lg font-semibold leading-7 tracking-tight text-white">Abdillah Al Mushauwir</h3>
+                  <p className="text-xs font-reguler leading-6 text-[#dedede]">Quality Assurance</p>
+                </div>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+
+      {/* <div className="bg-[#ffffff] py-24 sm:py-32">
           <div className="mx-auto grid max-w-5xl gap-y-5 px-3 lg:px- xl:grid-cols-1">
             <div className="text-center">
               "
@@ -132,7 +154,6 @@ function About() {
             </div>
           </div>
         </div> */}
-      </div>
     </>
   )
 }
