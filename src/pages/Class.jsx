@@ -39,6 +39,10 @@ function Class() {
   const createReference = async (event) => {
     event.preventDefault()
     try {
+      const youtubePattern = new RegExp(/^((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)?$/);
+      if (!youtubePattern.test(url)) {
+        return setErrMsg('Invalid URL Video Youtube')
+      }
       await axios.post(`/reference`, {
         title,
         channel,
@@ -235,7 +239,7 @@ function Class() {
                     </div>
 
                     <div className="flex flex-row justify-center items-center">
-                      {loggedStatus ? <MdEdit className="mr-6 text-[#01A84D]"
+                      {loggedStatus ? <MdEdit className="mr-6 text-[#01A84D] btn"
                         onClick={(event) => {
                           getReferenceById(event, reference._id)
                         }} />
